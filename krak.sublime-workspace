@@ -1,0 +1,925 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getHit"
+			],
+			[
+				"mrc",
+				"mrcount"
+			],
+			[
+				"mrco",
+				"mrcountcrement"
+			],
+			[
+				"error",
+				"errorThrown"
+			],
+			[
+				"backgr",
+				"background	background-color: hex"
+			],
+			[
+				"erro",
+				"errorThrown"
+			],
+			[
+				"border",
+				"border	border-bottom-color: color"
+			],
+			[
+				"cla",
+				"cla	class .. < ParentClass .. initialize .. end"
+			],
+			[
+				"r",
+				"require"
+			],
+			[
+				"bo",
+				"bounce"
+			],
+			[
+				"if",
+				"ifte	Ternary If"
+			],
+			[
+				"i",
+				"ife	If .. Else"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.coffee",
+			"settings":
+			{
+				"buffer_size": 1062,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "# root = exports ? this\n# -------------------------------------------\n\n###\nmongodb = require 'mongodb'\nmongodb_server = new mongodb.Server \"127.0.0.1\", 27017, {}\ndb = new mongodb.Db('test', mongodb_server, {})\ndb.open (error, client) ->\n  throw error if error\n  collection = new mongodb.Collection client, 'test_collection'\n  collection.find({}, {limit:10}).toArray (err, docs) ->\n    console.dir(docs)\n###\nconsole.log \"ur mom was notes here\"\nclass Idea\n  constructor: (args) ->\n    @caption = args.caption\n    @desc = args.desc\n# -------------------------------------------\nclass Employee\n  constructor: (id, name) ->\n    @id = id\n    @name = name\n\n  makeIdea: (caption, desc, color=\"red\") ->\n    idea = new Idea\n      caption: caption\n      desc: desc\n      color: color\n      author: @name\n# -------------------------------------------\nexports.index = (req, res) ->\n  sobah = new Employee 23, \"Sobah\"\n  idea = sobah.makeIdea \"WeatherMachine\", \"A WeatherMachine is a nice device\"\n  res.render \"index\",\n    title: \"Kraken: Express\"\n    menu: [\"Home\", \"Browse\", \"Help\"]\n    makeitem: (x) -> \"<a>#{x}</a>\"\n\nexports.ideas = (req, res) ->\n  res.render \"postit\",\n    title: \"Post-it's are awesome\"\n    notes: [\"Make Coffee\", \"Be Awesome\", \"Conformity ftw!\"]\n\nexports.ideasdata = (req, res) ->\n  # db.ideas.find()\n  res.send\n    notes: [\"Make Coffee\", \"Be Awesome\", \"Conformity ftw!\"]\n\nexports.batman = (req,res) ->\n  res.send\n    caption: \"Hello batman!!\"",
+			"file": "routes_src/index.coffee",
+			"file_size": 1500,
+			"file_write_time": 129731059309478307,
+			"settings":
+			{
+				"buffer_size": 1451,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes_src/employee.coffee",
+			"settings":
+			{
+				"buffer_size": 296,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/javascripts_src/jkraken.coffee",
+			"settings":
+			{
+				"buffer_size": 1571,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/javascripts/jquery.notification.js",
+			"settings":
+			{
+				"buffer_size": 2785,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 493,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 84,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/postit.jade",
+			"settings":
+			{
+				"buffer_size": 145,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/stylesheets/style.css",
+			"settings":
+			{
+				"buffer_size": 1055,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/stylesheets/jquery-ui-1.8.17.custom.css",
+			"settings":
+			{
+				"buffer_size": 33406,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/stylesheets/jquery.notification.css",
+			"settings":
+			{
+				"buffer_size": 383,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 373.0,
+		"selected_items":
+		[
+			[
+				"disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pkbu",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"",
+				"Nodejs::User File Settings"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: selection"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Discover Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"n",
+				"z:AAAPackageDev: New Completions File"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 386.0
+	},
+	"console":
+	{
+		"height": 132.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/RailsCast.tmTheme",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Cube2Media.tmTheme",
+		"/C/Code/Kraken/test/fish-test.coffee",
+		"/C/Code/Kraken/docs/docco.css",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/CSS/Symbol List.tmPreferences",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/CSS/Symbol List Group.tmPreferences",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Code/Kraken/public/javascripts/underscore.js",
+		"/C/Code/Kraken/public/javascripts/jkraken.js",
+		"/C/Code/Kraken/routes/employee.js",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/C/Code/Kraken/node_modules/jade/jade.js",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Nodejs/tools/uglify_js.js",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Nodejs/Snippets/node-fs-readdir.sublime-snippet",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Nodejs/Nodejs.py",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Nodejs/lib/__init__.py",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Nodejs.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/C/Code/Kraken/node_modules/jade/index.js",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/CoffeScript2.sublime-build",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/C/Code/Kraken/public/javascripts/jquery.js",
+		"/C/Code/Kraken/views/layout.jade",
+		"/C/Code/Kraken/public/stylesheets/style.css",
+		"/C/Code/Kraken/routes_src/index.coffee",
+		"/C/Code/Kraken/app.js",
+		"/C/Code/Kraken/routes_src/routes.coffee",
+		"/C/Code/Kraken/routes/index.js",
+		"/C/Code/Hanky/routes_src/index.coffee",
+		"/C/Users/Nix/WebstormProjects/Milk/foldr/views/layout.jade",
+		"/C/Users/Nix/WebstormProjects/Milk/foldr/public/stylesheets/style.css",
+		"/C/Users/Nix/Downloads/Sublime Text 2 Build 2165 x64/Data/Packages/Color Scheme - Default/Monokai.tmTheme",
+		"/C/Users/Nix/WebstormProjects/Milk/foldr/app.coffee",
+		"/C/Users/Nix/WebstormProjects/Milk/foldr/routes/garyoldman/index.js",
+		"/C/Users/Nix/AppData/Roaming/Microsoft/Windows/Recent/Monokai.tmTheme.lnk",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Abacus/Default (Windows).sublime-keymap",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Sublime Key Map.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Abacus/Base File.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/npm/node_modules/supervisor/lib/supervisor.js",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Pristine Packages/JavaScript.sublime-package",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Installed Packages/Package Control.sublime-package",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Nodejs/Nodejs.sublime-settings",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Sublime Settings.sublime-settings",
+		"/C/Code/Hanky/routes/car.js",
+		"/C/Code/Hanky/package.json",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Jade/Jade.tmLanguage",
+		"/C/Code/Hanky/omega.coffee",
+		"/C/Code/Hanky/omega.js",
+		"/C/Code/Hanky/panda.coffee",
+		"/C/Code/Hanky/SpecRunner.html",
+		"/C/Code/Hanky/jasmine-standalone-1.1.0.rc1/spec/PlayerSpec2.coffee",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Go/For Loop.tmSnippet",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/CSS/Comments.tmPreferences",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/CoffeeScript/Snippets/Array comprehension.tmSnippet",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/CoffeeScript/Preferences/CoffeeScript.tmPreferences",
+		"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/CoffeeScript/Commands/Align Assignments.tmCommand"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\Nix\\WebstormProjects\\Milk\\foldr\\node_modules"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"aler",
+			"Nix",
+			"2B2B2B",
+			"232323",
+			"#232323",
+			"6e9cbe",
+			"629cbe",
+			"exports",
+			"title",
+			"h1",
+			"ideatable",
+			"for",
+			"idea",
+			"caption",
+			"Sobah",
+			"Basic",
+			"dialog",
+			"engine",
+			"red",
+			"server",
+			"Server",
+			"server",
+			"routes",
+			"indent",
+			"data",
+			"Awesome",
+			") ->",
+			"exports.postit = (req, res) ->\n  res.render \"postit\",\n    title: \"Post-it's are awesome\"\n    notes: [\"Make Coffee\", \"Be Awesome\", \"Conformity ftw!\"]\n",
+			"table",
+			"shift_tab_unindent",
+			"	\"",
+			"find_selected_text",
+			"select",
+			"mouse",
+			"quo",
+			"\").",
+			"Hello",
+			"Kraken",
+			": \"",
+			"title",
+			": \"",
+			"Kraken",
+			": ",
+			"Kraken",
+			": ",
+			"Express",
+			"\"",
+			"mo\n			<string>",
+			"name</key>\n			<string>",
+			"require",
+			"router",
+			"showStack",
+			"production",
+			"errorHandler",
+			"__dirname",
+			"bodyParser",
+			"jade",
+			"\"",
+			"too",
+			".map",
+			"express",
+			"recent",
+			"translateTabsToSpaces",
+			"fig",
+			"id",
+			"params"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.coffee",
+					"settings":
+					{
+						"buffer_size": 1062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								341,
+								341
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 682.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes_src/index.coffee",
+					"settings":
+					{
+						"buffer_size": 1451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes_src/employee.coffee",
+					"settings":
+					{
+						"buffer_size": 296,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "public/javascripts_src/jkraken.coffee",
+					"settings":
+					{
+						"buffer_size": 1571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/Syntaxes/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/javascripts/jquery.notification.js",
+					"settings":
+					{
+						"buffer_size": 2785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1273,
+								1273
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 640.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "views/layout.jade",
+					"settings":
+					{
+						"buffer_size": 493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								240,
+								240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/index.jade",
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/postit.jade",
+					"settings":
+					{
+						"buffer_size": 145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "public/stylesheets/style.css",
+					"settings":
+					{
+						"buffer_size": 1055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/stylesheets/jquery-ui-1.8.17.custom.css",
+					"settings":
+					{
+						"buffer_size": 33406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19314,
+								19314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6995.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "public/stylesheets/jquery.notification.css",
+					"settings":
+					{
+						"buffer_size": 383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								201,
+								201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.466721938776,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.532818455783,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Code/Kraken/routes_src/index.coffee"
+			],
+			[
+				"jq",
+				"/C/Code/Kraken/public/javascripts/jquery.notification.js"
+			],
+			[
+				"kra",
+				"/C/Code/Kraken/public/javascripts_src/jkraken.coffee"
+			],
+			[
+				"pos",
+				"/C/Code/Kraken/views/postit.jade"
+			],
+			[
+				"em",
+				"/C/Code/Kraken/routes_src/employee.coffee"
+			],
+			[
+				"ap",
+				"/C/Code/Kraken/app.coffee"
+			],
+			[
+				"ind",
+				"/C/Code/Kraken/routes_src/index.coffee"
+			],
+			[
+				"ugl",
+				"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Nodejs/tools/uglify_js.js"
+			],
+			[
+				"app",
+				"/C/Code/Kraken/app.coffee"
+			],
+			[
+				"i",
+				"/C/Code/Kraken/routes_src/index.coffee"
+			],
+			[
+				"in",
+				"/C/Code/Kraken/routes_src/index.coffee"
+			],
+			[
+				"jk",
+				"public/javascripts_src/jkraken.coffee"
+			],
+			[
+				"css",
+				"public/stylesheets/style.css"
+			],
+			[
+				"la",
+				"views/layout.jade"
+			],
+			[
+				"stl",
+				"public/stylesheets/style.css"
+			],
+			[
+				"jad",
+				"views/index.jade"
+			],
+			[
+				"ic",
+				"routes_src/index.coffee"
+			],
+			[
+				"st",
+				"public/stylesheets/style.css"
+			],
+			[
+				"garyol",
+				"routes/garyoldman/index.js"
+			],
+			[
+				"key",
+				"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap"
+			],
+			[
+				"mon",
+				"/C/Users/Nix/Downloads/Sublime Text 2 Build 2165 x64/Data/Packages/Color Scheme - Default/Monokai.tmTheme"
+			],
+			[
+				"routes",
+				"/C/Code/Hanky/routes/index.js"
+			],
+			[
+				"car",
+				"car.coffee"
+			],
+			[
+				"pl",
+				"/C/Code/Hanky/jasmine-standalone-1.1.0.rc1/src/Player.coffee"
+			],
+			[
+				"bf",
+				"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings"
+			],
+			[
+				"sv",
+				"/C/Users/Nix/AppData/Roaming/npm/node_modules/supervisor/lib/supervisor.js"
+			],
+			[
+				"inde",
+				"index.coffee"
+			],
+			[
+				"su",
+				"/C/Users/Nix/AppData/Roaming/npm/node_modules/supervisor/lib/supervisor.js"
+			],
+			[
+				"un",
+				"untitled"
+			],
+			[
+				"unt",
+				"untitled"
+			],
+			[
+				"plsp",
+				"/C/Code/Hanky/jasmine-standalone-1.1.0.rc1/spec/PlayerSpec.js"
+			],
+			[
+				"pla",
+				"/C/Code/Hanky/jasmine-standalone-1.1.0.rc1/src/Player.coffee"
+			],
+			[
+				"super",
+				"/C/Users/Nix/AppData/Roaming/npm/node_modules/supervisor/lib/supervisor.js"
+			],
+			[
+				"bas",
+				"/C/Users/Nix/AppData/Roaming/Sublime Text 2/Packages/Abacus/Base File.sublime-settings"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true
+}
